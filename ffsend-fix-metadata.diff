@@ -1,0 +1,22 @@
+--- ffsend-0.2.57/Cargo.toml	1970-01-01T00:00:00+00:00
++++ ffsend-0.2.57/Cargo.toml	2019-12-05T14:35:44.614846+00:00
+@@ -117,7 +117,7 @@
+ 
+ [features]
+ archive = ["tar"]
+-clipboard = ["clip", "which"]
++clipboard = ["which"]
+ clipboard-bin = ["clipboard"]
+ clipboard-crate = ["clipboard"]
+ default = ["archive", "clipboard", "history", "infer-command", "qrcode", "send2", "send3", "urlshorten"]
+@@ -131,10 +131,6 @@
+ [target."cfg(any(target_os = \"linux\", target_os = \"freebsd\", target_os = \"dragonfly\", target_os = \"openbsd\", target_os = \"netbsd\"))".dependencies.which]
+ version = "3.1"
+ optional = true
+-[target."cfg(not(any(target_os = \"linux\", target_os = \"freebsd\", target_os = \"dragonfly\", target_os = \"openbsd\", target_os = \"netbsd\")))".dependencies.clip]
+-version = "0.5"
+-optional = true
+-package = "clipboard"
+ [badges.gitlab]
+ branch = "master"
+ repository = "timvisee/ffsend"
